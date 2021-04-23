@@ -1,0 +1,16 @@
+---
+- name: Creating accounts TEST
+  gather_facts: false
+  hosts: "test"
+  vars:
+    users:
+    - paul
+    - tanya
+    - ruby
+  tasks:
+  - name: "Create user accounts and add users to groups"
+    user:
+      name: "{{ item }}"
+      groups: "wheel"
+    with_items: "{{ users }}"
+    
