@@ -4,13 +4,13 @@
   hosts: all
   vars:
     users:
-    - paul
-    - tanya
-    - ruby
+      - paul
+      - tanya
+      - ruby
   tasks:
-  - name: "Create user accounts and add users to groups"
-    user:
-      name: "{{ item }}"
-      groups: "wheel"
-    with_items: "{{ users }}"
+    - name: "Create user accounts and add users to groups"
+      user:
+        name: "{{ item }}"
+        groups: "wheel"
+      with_items: "{{ users }}"
     
