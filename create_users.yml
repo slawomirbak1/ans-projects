@@ -1,7 +1,7 @@
 ---
 - name: Creating accounts TEST
   gather_facts: false
-  hosts: all
+  hosts: localhost
   vars:
     users:
       - paul
