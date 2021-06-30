@@ -11,4 +11,4 @@
         name: "{{ item }}"
         state: absent
         remove: yes
-        loop: "{{ user_names }}"
+      loop: "{{ user_names }}"
