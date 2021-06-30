@@ -6,6 +6,7 @@
     user_names:
       - paul
       - ruby
+      - tanya
   tasks:
     - name: Remove Users
       user:
